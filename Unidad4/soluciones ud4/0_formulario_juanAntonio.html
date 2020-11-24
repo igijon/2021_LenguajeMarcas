@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario de registro</title>
+
+    <style>
+        table {
+            border-collapse: collapse;
+            border: 1px solid black;
+        }
+
+        tr,
+        th,
+        td {
+            padding: 5px;
+            border: 1px solid black;
+            text-align: left;
+        }
+
+        caption {
+            font-size: 40px;
+            font-weight: bolder;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="#" method="POST">
+        <table>
+            <caption>Formulario de registro</caption>
+            <tr>
+                <th>
+                    <label for="nombre">Nombre:</label>
+                </th>
+                <td>
+                    <input type="text" name="nombre" placeholder="Escriba su nombre" maxlength="20" required/>
+                </td>
+                <th>
+                    <label for="apellidos">Apellidos:</label>
+                </th>
+                <td>
+                    <input type="text" name="apellidos" placeholder="Escriba sus apellidos" maxlength="30" required/>
+                </td>
+                <td colspan="2"></td>
+            </tr>
+
+            <tr>
+                <th>
+                    <label for="email">Correo electronico:</label>
+                </th>
+                <td>
+                    <input type="email" id="email" placeholder="Escriba su email" />
+                </td>
+
+                <th>
+                    <label for="password">Contraseña:</label>
+                </th>
+                <td>
+                    <input type="password" name="password" placeholder="Escriba una contraseña" minlength="4"
+                        maxlength="12">
+                </td>
+                <td colspan="2"></td>
+            </tr>
+            <tr>
+                <th>
+                    <label for="direccion">Direccion: </label>
+                </th>
+                <td>
+                    <input type="text" id="direccion" placeholder="Direccion ..">
+                </td>
+
+                <th>
+                    <label for="poblacion">Poblacion: </label>
+                </th>
+                <td>
+                    <input type="text" id="poblacion" placeholder="Localidad ..">
+                </td>
+
+                <th>
+                    <label for="provincia">Provincia: </label>
+                </th>
+                <td>
+                    <input type="text" id="provincia" placeholder="Provincia ..">
+                </td>
+            </tr>
+
+            <tr>
+                <th>
+                    <label for="fnacimiento">Fecha de nacimiento: </label>
+                </th>
+                <td>
+                    <input type="date" id="fnacimiento">
+                </td>
+
+                <th>
+                    <label for="negocio">Url de tu negocio: </label>
+                </th>
+                <td>
+                    <input type="url" id="negocio" placeholder="Web de tu empresa ..">
+                </td>
+                <td colspan="2"></td>
+            </tr>
+
+            <tr>
+                <th>
+                    <label for="colorfav">Color favorito: </label>
+                </th>
+                <td>
+                    <input type="color" id="colorfav">
+                </td>
+
+                <th>
+                    <label for="avatar">Foto de perfil: </label>
+                </th>
+                <td>
+                    <input type="file" id="avatar" accept=".jpg,.png">
+                </td>
+                <td colspan="2"></td>
+            </tr>
+
+            <tr>
+                <th>
+                    <label for="dni">DNI: </label>
+                </th>
+                <td>
+                    <input type="text" value="" id="dni" placeholder="Escriba su DNI .." size="10" maxlength="9" pattern="[0-9]{8}[A-Za-z]{1}">
+                </td>
+                <td colspan="2"></td>
+                <td colspan="2"></td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" value="Enviar"/>
+                </td>
+                <td></td>
+                <td colspan="2"></td>
+                <td colspan="2"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>
