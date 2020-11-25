@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio1a</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th,
+        td {
+            border: 2px solid rgb(97, 67, 235);
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="#" method="post">
+        <fieldset>
+            <legend>Datos Personales</legend>
+            <table>
+                <tr>
+                    <td>
+
+                        <label for="Nombre"><strong>Nombre</strong></label>
+                        <input type="text" id="Nombre" />
+
+                    </td>
+
+
+                    <td>
+                        <label for=">Apellidos"><strong>Apellidos</strong></label>
+                        <input type="text" id=">Apellidos" />
+                    </td>
+                    <td>
+                        <label for="hombre">Hombre</label>
+                        <input type="radio" name="sexo" id="hombre" />
+                        <label for="mujer">Mujer</label>
+                        <input type="radio" name="sexo" id="mujer" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+
+                        <label for="email"><strong>Correo</strong></label>
+                        <input required type="email" id="email" />
+
+                    </td>
+
+                    <td>
+                        <label for="DNI"><strong>DNI</strong></label>
+                        <input required type="text" pattern="[0-9]{8}[A-Za-z]{1}" id="DNI" />
+                    </td>
+
+                    <td>
+                        <label for="password"><strong>Password</strong></label>
+                        <input required type="password" id="password" />
+
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="Dirección"><strong>Dirección</strong>ón</label>
+                        <input type="text" id="Dirección" />
+                    </td>
+
+                    <td>
+                        <label for="Provincia"><strong>Provincia</strong></label>
+                        <select id="Provincia">
+                            <option value="">Seleccione Provincia</option>
+                            <option value="CR">Ciudad Real</option>
+                            <option value="TO">Toledo</option>
+                            <option value="AB">Albacete</option>
+                            <option value="CU">Cuenca</option>
+                            <option value="GU">Guadalajara</option>
+                        </select>
+                    </td>
+                    <td>
+
+                        <label for="Población">Población</label>
+                        <select id="Población">
+                            <optgroup label="Ciudad Real">
+                                <option value="">Seleccione Población</option>
+                                <option value="PU">Puertollano</option>
+                                <option value="AR">Argamasilla de Calatrava</option>
+                                <option value="AL">Almodovar del Campo</option>
+                                <option value="BR">Brazatortas</option>
+                            </optgroup>
+                            <optgroup label="Toledo">
+                                <option value="TA">Talavera de la Reina</option>
+                                <option value="ALX">Almorox</option>
+                            </optgroup>
+
+                            <optgroup label="Albacete">
+                                <option value="ALM">Almansa</option>
+                                <option value="CA">Caudete</option>
+                                <option value="LE">Letur</option>
+                            </optgroup>
+
+                            <optgroup label="Cuenca">
+                                <option value="TA">Tarancón</option>
+                                <option value="BE">Belmonte</option>
+                            </optgroup>
+
+                            <optgroup label="Guadalajara">
+                                <option value="Co">Cobeta</option>
+                                <option value="PA">Pastrana</option>
+                            </optgroup>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="date"><strong>Fecha de nacimiento</strong></label>
+                        <input type="date" id="date" />
+                    </td>
+
+                    <td>
+                        <label for="estadocivil"><strong>¿Casado?</strong></label>
+                        <input type="checkbox" id="estadocivil" /> </td>
+                    <td>
+                        <label for="hijos"><strong>¿Tiene hijos?</strong></label>
+                        <input type="checkbox" id="hijos" />
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td colspan="3">
+                        <label for="url"><strong>URL de tu negocio</strong></label>
+                        <input required type="url" id="url" />
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3">
+
+                        <label for="color"><strong>Color favorito</strong></label>
+                        <input type="color" id="color" />
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3">
+                        <label for="fichero"><strong>Avatar</strong></label>
+                        <input type="file" id="fichero" accept="image/*" />
+                    </td>
+                </tr>
+            </Table>
+        </fieldset>
+    </form>
+    <input type="submit" value="Enviar datos">
+</body>
+
+</html>
