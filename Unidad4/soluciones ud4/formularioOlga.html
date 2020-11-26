@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario final</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        legend {
+            border: 1px solid black;
+            background-color: white;
+        }
+
+        fieldset {
+            background-color: rgb(206, 206, 206);
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        #direccion {
+            width: 350px;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="#" method="post">
+        <h1>Hoja de inscripción</h1>
+        <h1>en los ciclos formativos de grado superior</h1>
+        <fieldset>
+            <legend>
+                <h4>Datos Personales</h4>
+            </legend>
+            <table>
+                <tr>
+                    <td><label for="nombre">Nombre</label></td>
+                    <td><label for="apellidos">Apellido</label></td>
+                    <td><label for="dni">DNI</label></td>
+                </tr>
+                <tr>
+                    <td><input type="text" name="nombre" id="nombre" placeholder="introduce tu nombre"></td>
+                    <td><input type="text" name="apellidos" id="apellidos" placeholder="introduce tus apellidos"></td>
+                    <td><input type="text" name="dni" id="dni" placeholder="introduce tu DNI"
+                            pattern="[0-9]{8}[A-Za-z]{1}" maxlength="9"></td>
+                </tr>
+                <tr>
+                    <td><label for="ln">Localidad de Nacimiento</label></td>
+                    <td><label for="pr">Provincia</label></td>
+                    <td><label for="fn">Fecha de Nacimiento</label></td>
+                </tr>
+                <tr>
+                    <td><input type="text" name="localidad" id="ln"></td>
+                    <td><select name="provincia" id="pr">
+                            <option value="">seleccione...</option>
+                            <option value="hu">Madrid</option>
+                            <option value="lr">Las Rozas</option>
+                            <option value="mh">Majadanonda</option>
+                            <option value="tr">Torrelodones</option>
+                        </select></td>
+                    <td><input type="date" name="nacimiento" id="fn"></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><label for="direccion">Dirección</label></td>
+                    <td><label for="cp">Código Postal</label></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="text" id="direccion"></td>
+                    <td>
+                        <!--input type="number" id="cp"-->
+                        <input type="text" id="cp" pattern="[0-9]{5}" />
+                    </td>
+                </tr>
+
+            </table>
+        </fieldset>
+        <fieldset>
+            <legend>
+                <h4>Forma de Acceso</h4>
+            </legend>
+            <ul>
+                <li><input type="radio" name="modoacceso" id="directo">
+                    <label for="directo">Directo</label>
+
+                    <ul>
+                        <li><input type="radio" name="formacion" id="blm">
+                            <label for="blm">Bachillerato Log Modalidad</label>
+                            <input type="text" name="modbach"></li>
+                        <li><input type="radio" name="formacion" id="ex">
+                            <label for="ex">Experimental</label></li>
+                        <li><input type="radio" name="formacion" id="cou">
+                            <label for="cou">COU</label>
+                            <input type="text" name="opcion"></li>
+                        <li><input type="radio" name="formacion" id="fp2">
+                            <label for="fp2">FP2</label></li>
+                        <li><input type="radio" name="formacion" id="otros">
+                            <label for="otros">Otros (especifique)</label>
+                            <input type="text" name="otros"></li>
+
+                    </ul>
+                </li>
+
+                <li><input type="radio" name="modoacceso" id="pl">
+                    <label for="pl">Prueba Libre</label></li>
+            </ul>
+        </fieldset>
+        <fieldset>
+            <legend>
+                <h4>Documentos adjuntados</h4>
+            </legend>
+            <table>
+                <tr>
+                    <td><input type="checkbox" name="ftdni" id="ftdni">
+                        <label for="ftdni">Fotocopia DNI</label></td>
+                    <td><input type="checkbox" name="crtac" id="crtac">
+                        <label for="crtac">Certificado Académico</label></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="checkbox" name="odoc" id="odoc">
+                        <label for="odoc">Otros documentos (especificar)</label>
+                        <input type="text" name="documentos"></td>
+                </tr>
+            </table>
+
+        </fieldset>
+        <input type="submit" id="enviar" value="Enviar solicitud"><input type="reset" id="limpiar">
+
+
+    </form>
+</body>
+
+</html>
